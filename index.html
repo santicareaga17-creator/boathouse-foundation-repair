@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boathouse Foundation Repair &amp; Maintenance | DBS Repair</title>
+<meta name="description" content="DBS Repair provides customized boathouse foundation repair and maintenance solutions for permanent pile docks, floating foundations, and older boathouses across Minnesota and Wisconsin.">
+<style>
+  :root{
+    --navy:#1c2b39;
+    --navy-deep:#152230;
+    --green:#7c9c5e;
+    --green-dark:#5f7d45;
+    --gold:#e8b923;
+    --gold-dark:#c99e17;
+    --cream:#f6f7f2;
+    --gray:#5a6169;
+    --border:#e4e6e1;
+    --white:#ffffff;
+    --radius:10px;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+    color:var(--navy);
+    background:var(--white);
+    line-height:1.6;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  h1,h2,h3,h4{margin:0 0 .5em;font-family:'Segoe UI', Arial, sans-serif;line-height:1.2;}
+  p{margin:0 0 1em;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 28px;border-radius:6px;font-weight:700;
+    font-size:.95rem;letter-spacing:.02em;cursor:pointer;border:2px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-gold{background:var(--gold);color:var(--navy-deep);}
+  .btn-gold:hover{background:var(--gold-dark);}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.7);}
+  .btn-outline:hover{background:rgba(255,255,255,.12);}
+  .btn-navy{background:var(--navy);color:#fff;}
+  .btn-navy:hover{background:var(--navy-deep);}
+  .btn-green{background:var(--green);color:#fff;}
+  .btn-green:hover{background:var(--green-dark);}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:700;
+    color:var(--green-dark);margin-bottom:.6em;display:block;
+  }
+  section{padding:64px 0;}
+  .section-alt{background:var(--cream);}
+  .section-title{font-size:2rem;color:var(--navy);text-transform:uppercase;letter-spacing:.02em;}
+  .section-title.center{text-align:center;}
+  .lead{color:var(--gray);font-size:1.05rem;max-width:820px;}
+
+  /* ===== Top bar ===== */
+  .topbar{background:var(--green);color:#fff;font-size:.82rem;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding-top:8px;padding-bottom:8px;}
+  .topbar ul{display:flex;gap:22px;flex-wrap:wrap;}
+  .topbar li a{opacity:.95;font-weight:600;}
+  .topbar li a:hover{text-decoration:underline;}
+  .topbar .phone{font-weight:800;}
+
+  /* ===== Nav ===== */
+  .navbar{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;}
+  .navbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;gap:24px;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo img{height:52px;width:auto;}
+  .navlinks{display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
+  .navlinks a{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--navy);white-space:nowrap;}
+  .navlinks a:hover{color:var(--green-dark);}
+  .navbar .btn{padding:11px 20px;font-size:.82rem;white-space:nowrap;}
+  .navlinks a.btn-navy{color:#fff;}
+  .nav-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--navy);cursor:pointer;}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;color:#fff;
+    background:linear-gradient(120deg, rgba(21,34,48,.92), rgba(28,43,57,.78)),
+      url('assets/dock.jpg') center/cover no-repeat;
+    padding:88px 0 76px;
+  }
+  .hero .eyebrow{color:#c9dcae;}
+  .hero h1{font-size:2.7rem;max-width:820px;text-transform:uppercase;}
+  .hero p.lead{color:#dbe2e7;font-size:1.08rem;max-width:700px;}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:1.6em;}
+  .hero-badges{display:flex;gap:28px;margin-top:2.6em;flex-wrap:wrap;color:#cfd8de;font-size:.85rem;}
+  .hero-badges strong{display:block;color:#fff;font-size:1.15rem;}
+
+  /* ===== Signs list ===== */
+  .signs{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+  .signs h2{font-size:1.7rem;}
+  .signs-list li{
+    display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);
+  }
+  .signs-list li:last-child{border-bottom:none;}
+  .signs-list .check{
+    flex:0 0 22px;height:22px;border-radius:50%;background:var(--green);
+    color:#fff;display:flex;align-items:center;justify-content:center;font-size:.75rem;margin-top:2px;
+  }
+  .signs-photo{border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.12);}
+
+  /* ===== Intro paragraphs ===== */
+  .intro-block{max-width:900px;margin:0 auto;}
+  .intro-block h2{font-size:1.9rem;text-align:center;margin-bottom:.8em;}
+  .intro-block p{color:var(--gray);}
+
+  /* ===== Cause cards ===== */
+  .cause-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px;}
+  .cause-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px;text-align:left;box-shadow:0 6px 18px rgba(20,30,40,.05);}
+  .cause-card img{width:52px;height:52px;margin-bottom:16px;object-fit:contain;}
+  .cause-card h3{font-size:1.15rem;color:var(--navy);}
+  .cause-card p{color:var(--gray);font-size:.95rem;margin:0;}
+
+  /* ===== Trust bar ===== */
+  .trust-bar{display:flex;align-items:center;justify-content:center;gap:52px;flex-wrap:wrap;padding:50px 20px 10px;}
+  .trust-integrity{font-size:1.5rem;font-weight:900;color:var(--navy);line-height:1.2;text-align:center;}
+  .trust-integrity .hl{background:var(--green);color:#fff;padding:2px 12px;border-radius:5px;}
+  .trust-google{display:flex;align-items:center;gap:10px;border:1px solid var(--border);border-radius:8px;padding:12px 18px;}
+  .trust-google .g-text{line-height:1.3;}
+  .trust-google .g-title{font-size:.85rem;color:var(--navy);font-weight:600;display:block;}
+  .trust-google .g-stars{color:#f4b400;font-size:.9rem;font-weight:800;}
+  .trust-google .g-num{color:var(--navy);font-weight:800;}
+  .trust-google .g-reviews{font-size:.78rem;color:var(--gray);display:block;}
+  .trust-bar img{height:64px;width:auto;object-fit:contain;}
+
+  /* ===== CTA banner ===== */
+  .cta-banner{
+    background:var(--navy);color:#fff;border-radius:var(--radius);
+    display:grid;grid-template-columns:1fr auto;align-items:end;gap:30px;
+    padding:56px 50px 0 50px;overflow:hidden;
+  }
+  .cta-banner .cta-copy{padding-bottom:56px;}
+  .cta-banner h3{margin:0 0 26px;font-size:2.1rem;font-weight:900;line-height:1.25;max-width:600px;}
+  .cta-banner h3 .hl{background:var(--green);padding:2px 14px;border-radius:6px;}
+  .cta-banner .mascot{height:300px;width:auto;align-self:end;}
+
+  /* ===== Solutions ===== */
+  .solution{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:70px;}
+  .solution:last-child{margin-bottom:0;}
+  .solution.reverse .sol-img{order:2;}
+  .solution.reverse .sol-copy{order:1;}
+  .sol-img img{border-radius:var(--radius);box-shadow:0 14px 34px rgba(20,30,40,.14);}
+  .sol-copy .eyebrow{color:var(--green-dark);}
+  .sol-copy h3{font-size:1.6rem;}
+  .sol-copy p{color:var(--gray);}
+  .sol-list li{display:flex;gap:10px;padding:8px 0;color:var(--navy);font-weight:600;font-size:.95rem;}
+  .sol-list .dot{flex:0 0 8px;height:8px;border-radius:50%;background:var(--gold);margin-top:8px;}
+
+  /* ===== Video block ===== */
+  .video-block{
+    background:var(--cream);border-radius:20px;
+    display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center;padding:42px;
+  }
+  .vb-copy h3{color:var(--navy);font-size:1.5rem;margin-bottom:14px;line-height:1.25;}
+  .vb-underline{display:block;width:56px;height:4px;background:var(--green);border-radius:2px;margin-bottom:22px;}
+  .vb-btn{
+    display:inline-flex;align-items:center;gap:10px;background:var(--green-dark);color:#fff;
+    padding:14px 26px;border-radius:30px;font-weight:800;font-size:.85rem;letter-spacing:.03em;text-transform:uppercase;
+  }
+  .vb-btn:hover{background:var(--green);}
+  .vb-thumb{position:relative;display:block;border-radius:12px;overflow:hidden;box-shadow:0 16px 34px rgba(20,30,40,.18);}
+  .vb-thumb img{width:100%;height:260px;object-fit:cover;}
+  .vb-topbar{
+    position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(180deg, rgba(0,0,0,.55), transparent);
+    color:#fff;font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:10px;
+  }
+  .vb-logo{
+    width:24px;height:24px;border-radius:50%;background:#fff;color:var(--navy);font-size:.6rem;font-weight:900;
+    display:inline-flex;align-items:center;justify-content:center;flex:0 0 24px;
+  }
+  .vb-play{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-size:1.2rem;padding-left:4px;
+  }
+  .vb-ytbadge{
+    position:absolute;bottom:12px;right:14px;background:rgba(0,0,0,.6);color:#fff;font-size:.72rem;font-weight:700;
+    padding:5px 10px;border-radius:4px;
+  }
+
+  /* ===== Process steps ===== */
+  .process-list{counter-reset:step;display:grid;gap:22px;margin-top:36px;}
+  .process-item{display:flex;gap:22px;align-items:flex-start;}
+  .process-num{
+    flex:0 0 46px;height:46px;border-radius:50%;background:var(--green);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;
+  }
+  .process-item h4{margin:0 0 4px;font-size:1.05rem;color:var(--navy);}
+  .process-item p{margin:0;color:var(--gray);font-size:.95rem;}
+
+  /* ===== Why matters ===== */
+  .why-matters{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+  .why-matters ul li{
+    display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);color:var(--navy);font-weight:600;
+  }
+  .why-matters .warn{color:var(--gold-dark);flex:0 0 20px;font-weight:900;}
+
+  /* ===== Service area ===== */
+  .service-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .service-gallery img{border-radius:var(--radius);width:100%;height:220px;object-fit:cover;box-shadow:0 12px 30px rgba(0,0,0,.12);}
+  .service-gallery img:nth-child(1),.service-gallery img:nth-child(2){height:280px;}
+  .service-copy{color:var(--gray);}
+
+  /* ===== Case study spotlight ===== */
+  .case-study{
+    display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center;
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:40px;box-shadow:0 10px 28px rgba(20,30,40,.06);
+  }
+  .case-study img{border-radius:8px;}
+  .case-study .tag{
+    display:inline-block;background:var(--green);color:#fff;font-size:.72rem;font-weight:800;
+    text-transform:uppercase;letter-spacing:.06em;padding:5px 12px;border-radius:20px;margin-bottom:14px;
+  }
+  .case-study h3{font-size:1.5rem;}
+  .case-study p{color:var(--gray);}
+
+  /* ===== Final CTA ===== */
+  .final-cta{background:var(--navy);color:#fff;text-align:center;}
+  .final-cta h2{font-size:2rem;text-transform:uppercase;}
+  .final-cta p{color:#cfd8de;max-width:700px;margin:0 auto 1.6em;}
+
+  /* ===== Testimonials ===== */
+  .trust-row{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;margin:0 auto 44px;max-width:820px;}
+  .trust-item{flex:1 1 220px;text-align:center;}
+  .trust-item .check{
+    width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-weight:800;
+  }
+  .trust-item p{font-size:.9rem;color:var(--gray);margin:0;}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .review-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:26px;box-shadow:0 6px 18px rgba(20,30,40,.05);}
+  .review-card .stars{color:var(--gold-dark);letter-spacing:2px;margin-bottom:10px;}
+  .review-card p{color:var(--navy);font-size:.92rem;}
+  .review-card .reviewer{font-weight:800;color:var(--navy);font-size:.9rem;margin-top:14px;}
+  .review-card .date{color:var(--gray);font-size:.78rem;}
+  .google-rating{display:flex;align-items:center;justify-content:center;gap:14px;margin:36px 0 0;color:var(--gray);font-size:.9rem;}
+  .google-rating strong{color:var(--navy);font-size:1.4rem;}
+
+  /* ===== Carousel ===== */
+  .carousel-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:30px;}
+  .carousel-wrap{position:relative;}
+  .carousel-track{
+    display:flex;gap:26px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;
+    padding-bottom:10px;-ms-overflow-style:none;scrollbar-width:none;
+  }
+  .carousel-track::-webkit-scrollbar{display:none;}
+  .carousel-card{
+    flex:0 0 calc(33.333% - 18px);scroll-snap-align:start;background:#fff;border:1px solid var(--border);
+    border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 22px rgba(20,30,40,.07);display:flex;flex-direction:column;
+  }
+  .carousel-card .cc-img-wrap{position:relative;height:230px;overflow:hidden;}
+  .carousel-card .cc-img-wrap img{width:100%;height:100%;object-fit:cover;}
+  .carousel-card .cc-body{padding:24px;flex:1;display:flex;flex-direction:column;}
+  .carousel-card h3{font-size:1.15rem;color:var(--navy);}
+  .carousel-card p{color:var(--gray);font-size:.92rem;flex:1;}
+  .carousel-card .learn-more{color:var(--green-dark);font-weight:800;font-size:.85rem;display:inline-flex;align-items:center;gap:6px;}
+  .carousel-nav{
+    position:absolute;top:40%;right:-6px;transform:translateY(-50%);
+    width:52px;height:52px;border-radius:50%;background:#fff;border:none;box-shadow:0 8px 20px rgba(0,0,0,.18);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.3rem;color:var(--navy);z-index:5;
+  }
+  .carousel-nav.prev{left:-6px;right:auto;}
+  .carousel-nav:hover{background:var(--green);color:#fff;}
+
+  /* ===== Service area lookup ===== */
+  .area-block{
+    background:linear-gradient(135deg, #eef5e7, #ffffff);border-radius:24px;
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+    padding:50px;box-shadow:0 20px 50px rgba(20,30,40,.08);
+  }
+  .area-badge{
+    display:inline-block;background:#e3efd9;color:var(--green-dark);font-size:.72rem;font-weight:800;
+    text-transform:uppercase;letter-spacing:.06em;padding:6px 14px;border-radius:20px;margin-bottom:16px;
+  }
+  .area-copy h2{font-size:2rem;color:var(--navy);margin-bottom:14px;}
+  .area-copy p{color:var(--gray);margin-bottom:24px;}
+  .area-toggle{display:inline-flex;background:#eef1ea;border-radius:30px;padding:4px;margin-bottom:22px;}
+  .area-toggle button{
+    border:none;background:transparent;padding:10px 22px;border-radius:26px;font-weight:800;font-size:.85rem;
+    color:var(--navy);cursor:pointer;
+  }
+  .area-toggle button.active{background:var(--green);color:#fff;}
+  .area-form label{display:block;font-weight:800;font-size:.82rem;color:var(--navy);margin-bottom:8px;}
+  .area-form-row{display:flex;gap:10px;}
+  .area-form-row input{flex:1;border:1px solid var(--border);border-radius:30px;padding:14px 20px;font-size:.9rem;font-family:inherit;}
+  .area-form-row button{
+    background:var(--navy);color:#fff;border:none;border-radius:30px;padding:14px 24px;font-weight:800;
+    font-size:.85rem;white-space:nowrap;cursor:pointer;
+  }
+  .area-form-row button:hover{background:var(--navy-deep);}
+  .area-map{background:#fff;border-radius:16px;padding:20px;box-shadow:0 10px 26px rgba(20,30,40,.08);}
+  .area-map img{width:100%;height:auto;display:block;}
+
+  /* ===== Footer ===== */
+  footer{background:#f0f1ec;border-top:1px solid var(--border);padding:56px 0 0;color:var(--navy);font-size:.9rem;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 2fr 1.3fr;gap:40px;padding-bottom:40px;}
+  footer h4{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px;}
+  footer ul li{padding:5px 0;}
+  footer a:hover{color:var(--green-dark);text-decoration:underline;}
+  .footer-logo img{height:56px;margin-bottom:14px;}
+  .social-icons a{
+    display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;
+    align-items:center;justify-content:center;margin-right:8px;font-size:.85rem;font-weight:700;
+  }
+  .footer-btn{display:inline-block;margin:14px 0;background:var(--gold);color:var(--navy-deep);font-weight:800;padding:11px 20px;border-radius:6px;font-size:.85rem;}
+  .footer-cols{display:flex;gap:40px;flex-wrap:wrap;}
+  .footer-cols ul{flex:1 1 160px;}
+  .footer-locations{columns:2;gap:24px;}
+  .footer-bottom{
+    border-top:1px solid var(--border);padding:20px 0;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:10px;font-size:.78rem;color:var(--gray);
+  }
+
+  @media (max-width:1160px){
+    .navlinks{position:fixed;top:0;right:-320px;height:100vh;width:300px;background:#fff;flex-direction:column;
+      padding:90px 26px 26px;box-shadow:-8px 0 24px rgba(0,0,0,.15);transition:right .25s ease;align-items:flex-start;}
+    .navlinks.open{right:0;}
+    .nav-toggle{display:block;}
+    .navbar .btn.desktop-only{display:none;}
+  }
+  @media (max-width:980px){
+    .signs,.solution,.solution.reverse,.why-matters,.case-study{grid-template-columns:1fr;}
+    .solution.reverse .sol-img,.solution.reverse .sol-copy{order:0;}
+    .cause-grid,.review-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .carousel-card{flex:0 0 85%;}
+    .hero h1{font-size:2.1rem;}
+    .service-gallery{grid-template-columns:1fr 1fr;}
+    .service-gallery img,.service-gallery img:nth-child(1),.service-gallery img:nth-child(2){height:200px;}
+    .video-block{grid-template-columns:1fr;}
+    .area-block{grid-template-columns:1fr;}
+    .cta-banner{grid-template-columns:1fr;padding:40px 30px 0;text-align:center;}
+    .cta-banner .cta-copy{padding-bottom:30px;}
+    .cta-banner h3{max-width:none;}
+    .cta-banner .mascot{height:220px;margin:0 auto;}
+    .trust-bar{gap:30px;padding:36px 20px 6px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Top bar ===== -->
+<div class="topbar">
+  <div class="wrap">
+    <ul>
+      <li><a href="#">📅 Schedule Annual Maintenance</a></li>
+      <li><a href="#">Join our Team</a></li>
+      <li><a href="#">💳 Online Payment</a></li>
+    </ul>
+    <a href="tel:2185250720" class="phone">📞 218-525-0720</a>
+  </div>
+</div>
+
+<!-- ===== Nav ===== -->
+<nav class="navbar">
+  <div class="wrap">
+    <a href="/" class="logo">
+      <img src="assets/dbs/DBSintegrity_logo.png" alt="DBS Repair">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="navlinks" id="navLinks">
+      <li><a href="#">Foundation Repair</a></li>
+      <li><a href="#">Basement Waterproofing</a></li>
+      <li><a href="#">Crawl Space</a></li>
+      <li><a href="#">Concrete Repair</a></li>
+      <li><a href="#">Home Insulation</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Service Area</a></li>
+      <li><a href="#" class="btn btn-navy">Free Inspection</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <div class="wrap">
+    <h1>Boathouse Foundation Repair &amp; Maintenance</h1>
+    <p class="lead">Your boathouse is built to handle the water. Its foundation should be too. Whether you're building new or repairing an aging structure, DBS delivers foundation solutions designed for your shoreline, water conditions, and long-term stability. From permanent pile and floating foundations to helical piers and steel bracing, we fix settlement, cracking, and structural movement before they put your investment at risk. Protect your boathouse with a foundation built to last.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-gold">Schedule Free Inspection</a>
+      <a href="tel:18552599625" class="btn btn-outline">Call 1-855-259-9625</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Signs ===== -->
+<section>
+  <div class="wrap signs">
+    <div>
+      <h2>Signs Your Boathouse Needs Foundation Repair</h2>
+      <ul class="signs-list">
+        <li><span class="check">✓</span> Shifting, leaning, or separating masonry block walls</li>
+        <li><span class="check">✓</span> Uneven or sagging boathouse floors</li>
+        <li><span class="check">✓</span> Visible cracks or gaps between foundation blocks</li>
+        <li><span class="check">✓</span> Doors or overhead doors that stick or won't close</li>
+        <li><span class="check">✓</span> Boathouse settling or tilting toward the water</li>
+        <li><span class="check">✓</span> Erosion or washout around footings and piers</li>
+      </ul>
+    </div>
+    <div class="signs-photo">
+      <img src="assets/boathouse.jpg" alt="Boathouse structure on a Minnesota lake showing foundation support posts">
+    </div>
+  </div>
+</section>
+
+<!-- ===== Expert intro ===== -->
+<section class="section-alt">
+  <div class="wrap intro-block">
+    <h2>Expert Boathouse Foundation Repair</h2>
+    <p>Boathouses along Minnesota and Wisconsin shorelines face unique foundation challenges from freeze-thaw cycles, wave action, fluctuating water levels, and shifting soils. DBS Repair provides reliable Boathouse Foundation Repair and structural restoration solutions that protect your waterfront investment year-round.</p>
+    <p>Even if your boathouse only sees regular use during the summer, the foundation is working year-round. Cold Minnesota and Wisconsin winters, ice movement, changing water levels, and repeated freeze-thaw cycles all put stress on the structure over time. When a boathouse sits exposed to the elements for part of the year, small foundation issues can go unnoticed until they become more serious. DBS Repair provides Boathouse Foundation Repair solutions designed to address settlement, cracking, shifting walls, and structural movement before they lead to bigger problems.</p>
+    <p>Many boathouses rely on stacked masonry or cinder block walls to support the structure, but after years of freezing, thawing, and wave exposure these blocks shift and separate, causing foundation settlement which leads to unstable walls, uneven floors, and exposure of the structure to moisture and the elements — the same issue our System Design Specialists diagnosed and repaired at a lakeside boathouse in McGregor, MN.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="cause-grid">
+      <div class="cause-card">
+        <img src="assets/dbs/dbsrepair-freeze-thawcycles-icon.svg" alt="">
+        <h3>Freeze-Thaw &amp; Ice Movement</h3>
+        <p>Repeated freeze-thaw cycles and seasonal ice movement along the shoreline cause masonry block supports to shift over time. As settlement progresses, boathouse walls can bow, separate, and structural problems continue to worsen with each winter.</p>
+      </div>
+      <div class="cause-card">
+        <img src="assets/dbs/dbsrepair-inadequate-icon.svg" alt="">
+        <h3>Wave Action &amp; Shoreline Erosion</h3>
+        <p>Constant wave action, fluctuating water levels, and shoreline erosion undermine the soil beneath boathouse footings. Without proper protection, the foundation is exposed to washout, moisture, and instability over time.</p>
+      </div>
+      <div class="cause-card">
+        <img src="assets/dbs/dbsrepair-cinderblocksupport-icon.svg" alt="">
+        <h3>Shifting Masonry Block Walls</h3>
+        <p>Older boathouses built with stacked masonry or cinder block walls were often not designed for the demanding conditions found on Minnesota and Wisconsin shorelines. Repair can address settlement, separation, and structural movement caused by years of water and ice exposure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Trust bar ===== -->
+<section style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="trust-bar">
+      <div class="trust-integrity">Thumbs Up<br>for <span class="hl">Integrity</span></div>
+      <div class="trust-google">
+        <svg width="30" height="30" viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.5 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 5.1 29.5 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21c0-1.3-.1-2.7-.4-3.5z"/>
+          <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.5 15.1 18.9 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 5.1 29.5 3 24 3 16.3 3 9.7 7.3 6.3 14.7z"/>
+          <path fill="#4CAF50" d="M24 45c5.2 0 9.9-1.7 13.6-4.7l-6.3-5.3C29.3 36.7 26.8 37.5 24 37.5c-5.2 0-9.6-3.5-11.2-8.3l-6.5 5C9.5 40.6 16.2 45 24 45z"/>
+          <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.2 5.7l6.3 5.3C39.9 36.9 44 30.9 44 24c0-1.3-.1-2.7-.4-3.5z"/>
+        </svg>
+        <div class="g-text">
+          <span class="g-title">Google Rating</span>
+          <span class="g-stars"><span class="g-num">4.5</span> &#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="g-reviews">Based on 426 reviews</span>
+        </div>
+      </div>
+      <img src="assets/dbs/bbb_dbs_bagde-1.png" alt="Better Business Bureau A+ Rating">
+      <img src="assets/dbs/Screenshot-2026-04-27-203820-e1777397977927.png" alt="Minnesota Star Tribune Top Work Places 2022">
+      <img src="assets/dbs/Northern-Minnesota-Builders-Association-1024x673.jpg" alt="Northern Minnesota Builders Association member">
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA banner ===== -->
+<section>
+  <div class="wrap">
+    <div class="cta-banner">
+      <div class="cta-copy">
+        <h3>Schedule your <span class="hl">free</span> Foundation Repair Inspection</h3>
+        <a href="#contact" class="btn btn-green">Book Now</a>
+      </div>
+      <img class="mascot" src="assets/dbs/DBS_Handout-Bonnie-whiteshirt-greenpants-mirror-whiteborder-200x300.webp" alt="Thumbs Up for Integrity — DBS Repair mascot">
+    </div>
+  </div>
+</section>
+
+<!-- ===== Solutions ===== -->
+<section class="section-alt">
+  <div class="wrap">
+    <h2 class="section-title center" style="margin-bottom:50px;">Expert Boathouse Foundation Repair From DBS Repair</h2>
+
+    <div class="solution">
+      <div class="sol-img">
+        <img src="assets/expert-1.jpg" alt="DBS Repair crew installing a helical pier at the corner of a lakeside cabin foundation">
+      </div>
+      <div class="sol-copy">
+        <span class="eyebrow">Primary Structural Stabilization Solution</span>
+        <h3>Helical Pier &amp; Steel Brace Stabilization</h3>
+        <p>To fully support the boathouse structure, DBS installs helical piers on the exterior along with steel braces and extensions engineered to gradually reverse the shifting of masonry block walls. When piers are combined with bracing, this makes for a solid, stable boathouse foundation system driven to competent soil regardless of surface or water conditions.</p>
+        <ul class="sol-list">
+          <li><span class="dot"></span> Year-round installation regardless of water levels</li>
+          <li><span class="dot"></span> Driven to competent soil depth for permanent stability</li>
+          <li><span class="dot"></span> Resists frost heave, wave action, and freeze-thaw cycling</li>
+          <li><span class="dot"></span> Combined with steel bracing for complete wall stabilization</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="solution reverse">
+      <div class="sol-img">
+        <img src="assets/dbs/cabin-foundation-repair-wisconsin-dbsrepair.jpg" alt="Masonry wall restoration and shoreline protection for a boathouse foundation">
+      </div>
+      <div class="sol-copy">
+        <span class="eyebrow">Structural &amp; Shoreline Protection</span>
+        <h3>Masonry Wall Restoration &amp; Shoreline Protection</h3>
+        <p>Once piers and bracing are in place, DBS gradually tightens the brace system to help realign shifted masonry block walls without a full wall rebuild. We pair this with erosion control measures around exposed footings to guard against washout, protecting the long-term stability of the repair.</p>
+        <ul class="sol-list">
+          <li><span class="dot"></span> Steel bracing gradually realigns shifted block walls</li>
+          <li><span class="dot"></span> Erosion control protects footings from wave action</li>
+          <li><span class="dot"></span> Sealing closes gaps that expose the structure to water</li>
+          <li><span class="dot"></span> Compatible with floating or permanent pile foundations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Video block ===== -->
+<section>
+  <div class="wrap">
+    <div class="video-block">
+      <div class="vb-copy">
+        <h3>Boathouse &amp; Cabin Foundation Repair</h3>
+        <span class="vb-underline"></span>
+        <a href="https://www.youtube.com/@DBSResidentialSolutionsDuluth" target="_blank" rel="noopener" class="vb-btn">&#9654; Watch on YouTube</a>
+      </div>
+      <a class="vb-thumb" href="https://www.youtube.com/@DBSResidentialSolutionsDuluth" target="_blank" rel="noopener">
+        <img src="assets/cabin.jpg" alt="Boathouse and Cabin Foundation Repair video thumbnail">
+        <span class="vb-topbar"><span class="vb-logo">DBS</span> Boathouse &amp; Cabin Foundation Repair</span>
+        <span class="vb-play">&#9654;</span>
+        <span class="vb-ytbadge">&#9654; YouTube</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Process ===== -->
+<section class="section-alt">
+  <div class="wrap">
+    <h2 class="section-title">Boathouse Foundation Repair &amp; Structural Solutions</h2>
+    <p class="lead">DBS Repair offers comprehensive Boathouse Foundation Repair services designed to address the structural, moisture, and shoreline challenges commonly found on lakeside properties throughout Minnesota and Wisconsin. In many cases, multiple repairs can be coordinated as part of a single project to help minimize disruption and maximize your time on the water.</p>
+    <div class="process-list">
+      <div class="process-item"><div class="process-num">1</div><div><h4>Boathouse Foundation Repair</h4><p>Helical piers driven to competent soil at each corner and mid-span support point, replacing or supplementing shifted masonry block walls.</p></div></div>
+      <div class="process-item"><div class="process-num">2</div><div><h4>Helical Piers</h4><p>Steel helical piers anchor to steel braces creating a permanent support system that resists freeze-thaw and wave movement indefinitely.</p></div></div>
+      <div class="process-item"><div class="process-num">3</div><div><h4>Steel Bracing &amp; Extensions</h4><p>Steel braces and extensions span between piers to reverse wall shifting and distribute structural load evenly.</p></div></div>
+      <div class="process-item"><div class="process-num">4</div><div><h4>Masonry Wall Realignment</h4><p>Gradual tightening of the brace system helps straighten separated block walls without a full wall replacement.</p></div></div>
+      <div class="process-item"><div class="process-num">5</div><div><h4>Shoreline Erosion Control</h4><p>Protective measures around footings and piers guard against washout from wave action and fluctuating water levels.</p></div></div>
+      <div class="process-item"><div class="process-num">6</div><div><h4>Sealing &amp; Maintenance</h4><p>Sealing gaps and joints protects the structure from moisture, pests, and further water exposure between seasons.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Why matters ===== -->
+<section>
+  <div class="wrap why-matters">
+    <div>
+      <h2 style="font-size:1.7rem;">Why Prompt Boathouse Foundation Repair Matters</h2>
+      <p class="lead">Many boathouse structural problems start with delayed repairs. When shifting masonry and shoreline exposure go unaddressed, these consequences compound over time:</p>
+    </div>
+    <ul>
+      <li><span class="warn">!</span> Walls continue to shift and separate the longer settlement goes unaddressed</li>
+      <li><span class="warn">!</span> Wave action and erosion accelerate damage to exposed footings</li>
+      <li><span class="warn">!</span> Moisture accumulates in wood framing, beams, and flooring</li>
+      <li><span class="warn">!</span> Ice movement reaches shifted supports directly, accelerating damage</li>
+      <li><span class="warn">!</span> Structural movement can compromise the safety of docks and platforms attached to the boathouse</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Case study spotlight ===== -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="case-study">
+      <img src="assets/dbs/foundation-repair-mcgregor-mn-unstable-boathouse.jpg" alt="Unstable shifting concrete block walls inside a lakeside boathouse before structural foundation repair in McGregor, Minnesota">
+      <div>
+        <span class="tag">Case Study</span>
+        <h3>Unstable Boathouse Foundation Repair &amp; Stabilization in McGregor, MN</h3>
+        <p>The owner of a lakeside cabin property in McGregor, MN became increasingly concerned about the structural condition of their shoreline boathouse. The heavy masonry blocks forming the foundation had begun to shift and separate over time, leaving the walls highly unstable.</p>
+        <p>After a free, no-obligation on-site estimate, our System Design Specialist explained how the problem had formed and the best possible solution: installing helical piers on the outside of the boathouse along with steel braces and extensions to reverse the shifting of the block walls. The result left the homeowner with a stabilized boathouse and peace of mind.</p>
+        <a href="#contact" class="btn btn-navy">Read More Case Studies</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Service area ===== -->
+<section>
+  <div class="wrap">
+    <h2 class="section-title center">Boathouse Foundation Repair Across Minnesota &amp; Wisconsin</h2>
+    <p class="lead center" style="margin:0 auto 40px;text-align:center;">DBS Repair provides Boathouse Foundation Repair for lakeside and shoreline properties across Minnesota and Wisconsin. As a locally owned and operated company, we understand how changing soils, moisture, ice movement, and wave action can affect boathouse foundations over time.</p>
+    <div class="service-gallery">
+      <img src="assets/dbs/foundation-repair-mcgregor-mn-unstable-boathouse.jpg" alt="Boathouse foundation repair project in McGregor, MN">
+      <img src="assets/dbs/red-residential-cabin-wooded-slope-mercer-wi.jpg" alt="Lakeside property in Mercer, WI served by DBS Repair">
+      <img src="assets/crawl.jpg" alt="Crawl space support post beneath a lakeside deck foundation">
+      <img src="assets/cabin.jpg" alt="DBS Repair crew installing a helical pier at a lakeside cabin foundation">
+      <img src="assets/expert-2.jpg" alt="DBS Repair crew and equipment on site at a lakeside cabin foundation repair">
+      <img src="assets/dock.jpg" alt="Lakeside deck and dock at a Minnesota cabin served by DBS Repair">
+      <img src="assets/expert-3.jpg" alt="DBS Repair crew installing a steel I-beam support post beneath a structure">
+      <img src="assets/meet.jpg" alt="DBS Repair specialist inspecting a cabin exterior during a free foundation inspection">
+    </div>
+    <p class="service-copy" style="margin-top:28px;">Our in-house foundation specialists can inspect your boathouse, explain what is happening beneath the structure, and recommend the right repair solution. We provide each customer with a free, no-obligation foundation repair quote in writing, including an on-site inspection, a personal consultation, and a detailed proposal. Our service area includes Duluth, Eau Claire, Hibbing, and Mountain Iron. Whether your boathouse is in Ely, along the Boundary Waters, near Brainerd, or in the lake country of Wisconsin, contact us to confirm we serve your area.</p>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="final-cta" id="contact">
+  <div class="wrap">
+    <h2>Is Your Boathouse Foundation Ready for the Season?</h2>
+    <p>If you are concerned about your boathouse's structure, trust the foundation experts at DBS Repair. We provide boathouse structural repair solutions that not only restore the foundation but provide lasting protection.</p>
+    <a href="tel:18552599625" class="btn btn-gold">Call 1-855-259-9625</a>
+    <a href="#" class="btn btn-outline">Schedule Free Inspection</a>
+  </div>
+</section>
+
+<!-- ===== Testimonials ===== -->
+<section class="section-alt">
+  <div class="wrap">
+    <h2 class="section-title center">Why Minnesota Homeowners Choose DBS Repair</h2>
+    <div class="trust-row">
+      <div class="trust-item"><div class="check">✓</div><p>Woman-owned, locally operated with offices in Duluth &amp; Eden Prairie, MN</p></div>
+      <div class="trust-item"><div class="check">✓</div><p>Permanent home performance solutions — we don't do band-aid fixes</p></div>
+      <div class="trust-item"><div class="check">✓</div><p>Serving Minnesota and western Wisconsin, with flexible financing available</p></div>
+    </div>
+
+    <h3 style="text-align:center;font-size:1.3rem;margin-bottom:30px;">Boathouse &amp; Cabin Homeowner Reviews</h3>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"I recently had DBS perform warranty work on foundation piers for a cabin boathouse. The crew was incredible. Their work was top notch. The foreman, Trevor, was particularly impressive."</p>
+        <div class="reviewer">Matt</div>
+        <div class="date">2 months ago</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"We were stumped about how to address our aging cabin's foundation issues. DBS clearly understood what was causing the problem and how to fix it. At a follow up visit one year later, the foundation is right where they moved it."</p>
+        <div class="reviewer">Max Johnson</div>
+        <div class="date">1 month ago</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Trevor, with DBS foundation, base and insulation, just completed work on my Madeline Island Cottage on Lake Superior. The work included excavation, shoring, and replacement supports."</p>
+        <div class="reviewer">DW Laukka</div>
+        <div class="date">2 months ago</div>
+      </div>
+    </div>
+    <div class="google-rating">
+      <strong>4.5</strong>
+      <span>Google Rating &middot; Based on 426 reviews</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Carousel ===== -->
+<section>
+  <div class="wrap">
+    <div class="carousel-head">
+      <div>
+        <span class="eyebrow">Our Services</span>
+        <h2 class="section-title" style="margin:0;">Boathouse &amp; Waterfront Services</h2>
+      </div>
+    </div>
+    <div class="carousel-wrap">
+      <button class="carousel-nav prev" id="ccPrev" aria-label="Previous">&#8249;</button>
+      <div class="carousel-track" id="ccTrack">
+        <article class="carousel-card">
+          <div class="cc-img-wrap"><img src="assets/dbs/foundation-repair-mcgregor-mn-unstable-boathouse.jpg" alt="Boathouse Foundation Repair"></div>
+          <div class="cc-body">
+            <h3>Boathouse Foundation Repair</h3>
+            <p>DBS Repair has the experience, knowledge, and equipment to repair or restabilize your boathouse foundation.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+        </article>
+        <article class="carousel-card">
+          <div class="cc-img-wrap"><img src="assets/dbs/cabin-foundation-repair-eauclair-dbsrepair.jpg" alt="Helical Pier &amp; Pile Installation"></div>
+          <div class="cc-body">
+            <h3>Helical Pier &amp; Pile Installation</h3>
+            <p>Our crews install permanent helical piers and pile foundations engineered for fluctuating water levels and shoreline soils.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+        </article>
+        <article class="carousel-card">
+          <div class="cc-img-wrap"><img src="assets/dbs/basement-wall-stabilization-everbrace-after-bloomington-mn-scaled.jpg" alt="Shoreline Erosion &amp; Wall Stabilization"></div>
+          <div class="cc-body">
+            <h3>Shoreline Erosion &amp; Wall Stabilization</h3>
+            <p>Steel bracing and erosion control options protect your shoreline structure from wave action and washout.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+        </article>
+        <article class="carousel-card">
+          <div class="cc-img-wrap"><img src="assets/dbs/cabin-crawl-space-repair-moose-lake-mn-after.jpg" alt="Crawl Space &amp; Foundation Encapsulation"></div>
+          <div class="cc-body">
+            <h3>Crawl Space &amp; Foundation Encapsulation</h3>
+            <p>Seal out moisture and pests with vapor barrier encapsulation designed for seasonal, waterfront structures.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+        </article>
+        <article class="carousel-card">
+          <div class="cc-img-wrap"><img src="assets/dbs/cabin-foundation-repair-wisconsin-dbsrepair.jpg" alt="Custom Boathouse Foundation Design"></div>
+          <div class="cc-body">
+            <h3>Custom Boathouse Foundation Design</h3>
+            <p>From permanent pile docks to floating foundations, we design site-specific solutions for new builds and restorations.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+        </article>
+      </div>
+      <button class="carousel-nav" id="ccNext" aria-label="Next">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Service area lookup ===== -->
+<section>
+  <div class="wrap">
+    <div class="area-block">
+      <div class="area-copy">
+        <span class="area-badge">Service Area Lookup</span>
+        <h2>Find Your Service Area</h2>
+        <p>Enter your ZIP code to see which service page is right for your area.</p>
+        <div class="area-toggle">
+          <button type="button" class="active" id="areaMnBtn">Minnesota</button>
+          <button type="button" id="areaWiBtn">Wisconsin</button>
+        </div>
+        <div class="area-form">
+          <label for="areaZip">ZIP Code</label>
+          <div class="area-form-row">
+            <input type="text" id="areaZip" placeholder="Enter ZIP code">
+            <button type="button">Check Availability</button>
+          </div>
+        </div>
+      </div>
+      <div class="area-map">
+        <img id="areaMapImg" src="assets/dbs/DBS-Maps_MN-scaled.png" alt="DBS service area map for Minnesota">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-logo">
+      <img src="assets/dbs/DBSintegrity_logo.png" alt="DBS Repair">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/DBSrepair/" aria-label="Facebook">f</a>
+        <a href="https://www.instagram.com/dbsrepair/" aria-label="Instagram">ig</a>
+        <a href="https://www.youtube.com/@DBSResidentialSolutionsDuluth" aria-label="YouTube">yt</a>
+        <a href="https://www.tiktok.com/@dbsrepair" aria-label="TikTok">tt</a>
+        <a href="https://www.linkedin.com/company/dbs-residential-solutions-inc./" aria-label="LinkedIn">in</a>
+      </div>
+      <a href="#contact" class="footer-btn">Get a Free Inspection</a>
+      <p><a href="tel:2186168594">📞 218-616-8594</a></p>
+      <hr style="border:none;border-top:1px solid var(--border);">
+      <p><strong>DBS Residential Solutions, Inc.</strong><br>5116 Jean Duluth Road Suite 300<br>Duluth, MN 55803</p>
+      <hr style="border:none;border-top:1px solid var(--border);">
+      <p><strong>DBS Residential Solutions, Inc.</strong><br>6900 Shady Oak Rd Suite #120<br>Eden Prairie, MN 55344</p>
+      <hr style="border:none;border-top:1px solid var(--border);">
+      <p>MN Contractor <strong>#CR692609</strong><br>WI Contractor <strong>#1217217</strong></p>
+    </div>
+
+    <div class="footer-cols">
+      <ul>
+        <li><h4>Services</h4></li>
+        <li><a href="#"><strong>Foundation Repair</strong></a></li>
+        <li><a href="#">Replace Repair Foundation</a></li>
+        <li><a href="#">Pier Systems</a></li>
+        <li><a href="#">Cabin Foundation Repair</a></li>
+        <li><a href="#">Boathouse Foundation Repair</a></li>
+        <li><a href="#"><strong>Basement Waterproofing</strong></a></li>
+        <li><a href="#">French Drain System</a></li>
+        <li><a href="#">Basement Flooding Solutions</a></li>
+        <li><a href="#">Dehumidifiers</a></li>
+      </ul>
+      <ul>
+        <li><h4>&nbsp;</h4></li>
+        <li><a href="#"><strong>Crawl Space</strong></a></li>
+        <li><a href="#">Crawl Space Encapsulation</a></li>
+        <li><a href="#">Crawl Space Repair</a></li>
+        <li><a href="#">Vapor Barrier Installation</a></li>
+        <li><a href="#"><strong>Concrete Repair</strong></a></li>
+        <li><a href="#">Polylevel® Injection</a></li>
+        <li><a href="#">Concrete Repair Services</a></li>
+        <li><a href="#">DuraStone Concrete Overlay</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Our Company</h4>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Online Payment</a></li>
+        <li><a href="#">Financing</a></li>
+        <li><a href="#">Job Opportunities</a></li>
+      </ul>
+      <h4 style="margin-top:24px;">Service Areas</h4>
+      <ul class="footer-locations">
+        <li><a href="#">📍 Ashland, MN</a></li>
+        <li><a href="#">📍 Burnsville, MN</a></li>
+        <li><a href="#">📍 Chanhassen, MN</a></li>
+        <li><a href="#">📍 Chaska, MN</a></li>
+        <li><a href="#">📍 Duluth, MN</a></li>
+        <li><a href="#">📍 Eden Prairie, MN</a></li>
+        <li><a href="#">📍 Maple Grove, MN</a></li>
+        <li><a href="#">📍 Minneapolis, MN</a></li>
+        <li><a href="#">📍 St Cloud, MN</a></li>
+        <li><a href="#">📍 Eau Claire, WI</a></li>
+        <li><a href="#">📍 Superior, WI</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p>Copyright © 2026 JAST Media. All Rights Reserved &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a> &nbsp;|&nbsp; <a href="#">Cookie Policy</a></p>
+    <p>Site Powered By: <a href="https://www.jastmedia.com/" target="_blank" rel="noopener">JAST Media</a></p>
+  </div>
+</footer>
+
+<script>
+  // mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  // carousel
+  const track = document.getElementById('ccTrack');
+  const prev = document.getElementById('ccPrev');
+  const next = document.getElementById('ccNext');
+  function cardStep(){
+    const card = track.querySelector('.carousel-card');
+    if(!card) return 300;
+    const style = getComputedStyle(track);
+    return card.getBoundingClientRect().width + parseFloat(style.gap || 26);
+  }
+  next.addEventListener('click', () => track.scrollBy({left: cardStep(), behavior:'smooth'}));
+  prev.addEventListener('click', () => track.scrollBy({left: -cardStep(), behavior:'smooth'}));
+
+  // service area map toggle
+  const areaMnBtn = document.getElementById('areaMnBtn');
+  const areaWiBtn = document.getElementById('areaWiBtn');
+  const areaMapImg = document.getElementById('areaMapImg');
+  const AREA_MAPS = {
+    mn: {src:'assets/dbs/DBS-Maps_MN-scaled.png', alt:'DBS service area map for Minnesota'},
+    wi: {src:'assets/dbs/DBS-Maps_Wisconsin-scaled.png', alt:'DBS service area map for Wisconsin'}
+  };
+  areaMnBtn.addEventListener('click', () => {
+    areaMnBtn.classList.add('active'); areaWiBtn.classList.remove('active');
+    areaMapImg.src = AREA_MAPS.mn.src; areaMapImg.alt = AREA_MAPS.mn.alt;
+  });
+  areaWiBtn.addEventListener('click', () => {
+    areaWiBtn.classList.add('active'); areaMnBtn.classList.remove('active');
+    areaMapImg.src = AREA_MAPS.wi.src; areaMapImg.alt = AREA_MAPS.wi.alt;
+  });
+</script>
+</body>
+</html>

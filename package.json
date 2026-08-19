@@ -1,0 +1,10 @@
+{
+  "name": "boathouse-foundation-repair",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Boathouse Foundation Repair & Maintenance landing page",
+  "scripts": {
+    "dev": "npx serve . -l 4210",
+    "start": "npx serve ."
+  }
+}
